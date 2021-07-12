@@ -1,0 +1,40 @@
+{
+  "name": "start_project_quickly_desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-store": "^8.0.0"
+  },
+  "devDependencies": {
+    "electron": "^13.1.6",
+    "electron-builder": "^22.11.7"
+  },
+  "build": {
+    "appId": "com.henry.spq.app",
+    "productName": "SPQ",
+    "win": {
+      "target": "nsis",
+      "icon": "dist/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "dist/icon.ico",
+      "installerHeaderIcon": "dist/icon.ico",
+      "deleteAppDataOnUninstall": true,
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    },
+    "directories": {
+      "output": "release"
+    }
+  }
+}
